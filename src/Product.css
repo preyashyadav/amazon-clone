@@ -32,6 +32,10 @@
   margin-top: 5px;
 }
 
+.product-rating {
+  display: flex;
+}
+
 .product-info {
   height: 100px;
   width: 100%;

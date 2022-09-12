@@ -6,10 +6,13 @@ function Header() {
   return (
     <div className="header">
       <div>
-        <img
-          className="header-logo"
-          src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-Transparent-1024x310.png"
-        />
+        <a href="/">
+          <img
+            className="header-logo"
+            src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-Transparent-1024x310.png"
+            alt=""
+          />
+        </a>
       </div>
       <div className="header-search">
         <input className="header-search-input" type="text"></input>
@@ -29,7 +32,9 @@ function Header() {
           <span className="header-option-line-two">Prime</span>
         </div>
         <div className="header-option-basket">
-          <ShoppingCartIcon />
+          <a href="/checkout" alt="">
+            <ShoppingCartIcon />
+          </a>
           <span className="header-option-line-two basket-count">0</span>
         </div>
       </div>

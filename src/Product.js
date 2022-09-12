@@ -1,22 +1,23 @@
 import React from "react";
 import "./Product.css";
-function Product() {
+function Product({ title, price, rating , image}) {
   return (
     <div className="product">
       <div className="product-info">
-        <p>
-          Pothos are such popular houseplants for a reason, its golden streaks
-          on the leaves as they trail along a wall, shelf.
-        </p>
+        <p>{title}</p>
         <p className="product-price">
           <small>$</small>
-          <strong>9.99</strong>
+          <strong>{price}</strong>
         </p>
         <div className="product-rating">
-          <div>⭐</div>
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <p>⭐</p>
+            ))}
         </div>
       </div>
-      <img src="https://m.media-amazon.com/images/I/61nBfzfh2dL._AC_UL480_FMwebp_QL65_.jpg" />
+      <img src={image} alt="" />
       <button>Add to basket</button>
     </div>
   );
